@@ -105,6 +105,15 @@
 	        } else {
 	          element.classList.remove(options.activeclass);
 	        }
+
+          let menubar = document.querySelector('.menubar');
+          if (event.indexv > 0) {
+            event.currentSlide.append(menubar);
+            menubar.style.visibility = 'visible';
+          } else {
+            menubar.style.visibility = 'hidden';
+          }
+
 	      });
 	    };
 
