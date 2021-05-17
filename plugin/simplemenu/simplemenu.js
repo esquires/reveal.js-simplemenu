@@ -107,13 +107,11 @@
 	        }
 
           let menubar = document.querySelector('.menubar');
-          if (event.indexv > 0) {
-            event.currentSlide.append(menubar);
-            menubar.style.visibility = 'visible';
-          } else {
+          if (event.currentSlide.getAttribute('suppress-menubar') != null || deck.isPrintingPDF()) {
             menubar.style.visibility = 'hidden';
+          } else {
+            menubar.style.visibility = 'visible';
           }
-
 	      });
 	    };
 
